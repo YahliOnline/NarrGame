@@ -10,15 +10,15 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] string currentWords, words, newWords; //what the NPC is saying, and what the new dialogue is
     [SerializeField] TextMeshProUGUI wordText; //the words
     [SerializeField] GameObject textParent; //NOT SURE WHY WE NEED THIS, but its the parent object of our text
-    //[SerializeField] KeyHandler keyHandler; //the handler for the key, which I dont have programmed yet
+    [SerializeField] KeyHandler keyHandler; //the handler for the key
     bool isTalking; //are we talking?
     Transform playerTransform; //I'm guessing this is to know where the player is, will probably determine interactionDistance
 
     void Start()
     {
-        playerTransform = FindObjectOfType<PlayerController>().transform; //gets the players transform for the ProcessCheckTalk function
-        //keyHandler = FindObjectOfType<KeyHandler>();
-        //keyHandler.KeyPickup.AddListener(UpdateText);
+        playerTransform = FindObjectOfType<NewPlayerController>().transform; //gets the players transform for the ProcessCheckTalk function
+        keyHandler = FindObjectOfType<KeyHandler>();
+        keyHandler.KeyPickup.AddListener(UpdateText);
         currentWords = words; //this is setting up dialogue
     }
 

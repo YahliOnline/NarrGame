@@ -44,12 +44,15 @@ TagManager:
   - name: background
     uniqueID: 3751237009
     locked: 0
+  - name: wall
+    uniqueID: 2983796925
+    locked: 0
   - name: NPC
     uniqueID: 760639821
     locked: 0
   - name: player
     uniqueID: 474066343
     locked: 0
-  - name: wall
-    uniqueID: 2983796925
+  - name: UI
+    uniqueID: 3424009563
     locked: 0
