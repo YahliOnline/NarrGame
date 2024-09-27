@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TreeHandler : MonoBehaviour
+public class TreeTwo : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class TreeHandler : MonoBehaviour
     void Update()
     {
         if (Vector2.Distance(playerTransform.position, transform.position) < 2){
-            SceneManager.LoadScene("Scene2");
+            SceneManager.LoadScene("Scene3");
         }
     }
 }
